@@ -1,8 +1,11 @@
-run-dist:
+run-dist: installDist
 	./build/install/app/bin/app
 
-build:
-	./gradlew build
+installDist:
+	./gradlew installDist
 
 clean:
 	./gradlew clean
+
+checkstyle:
+	./gradlew checkstyle

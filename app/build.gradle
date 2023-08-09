@@ -3,6 +3,7 @@ plugins {
     id 'se.patrikerdes.use-latest-versions' version '0.2.18'
     id 'com.github.ben-manes.versions' version '0.47.0'
     id 'application'
+    id 'checkstyle'
 }
 
 group = 'hexlet.code'
@@ -23,6 +24,11 @@ test {
     useJUnitPlatform()
 }
 
-compileJava {
-    options.release.set(20)
+run {
+    standardInput = System.in
 }
+
+compileJava {
+//    options.release.set(20)
+}
+
