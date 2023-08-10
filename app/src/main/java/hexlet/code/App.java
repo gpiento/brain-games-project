@@ -2,22 +2,39 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-public class App {
+public final class App {
+
+    private App() {
+    }
 
     /**
-     * Project java-project-lvl1.
+     * App.
      *
-     * @param args input parameters
+     * @param args input
      */
     public static void main(final String[] args) {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
+        System.out.println("2 - Even");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
         Scanner scanner = new Scanner(System.in);
-        if (scanner.nextLine().equals("1")) {
-            Cli.greetingUser();
+        int switcher = scanner.nextInt();
+        System.out.println();
+
+        switch (switcher) {
+            case 0 -> {
+                return;
+            }
+            case 1 -> Cli.greetingUser();
+            case 2 -> {
+                Cli.greetingUser();
+                Even.gameEven();
+            }
+            default -> {
+            }
         }
+        scanner.close();
     }
 
 }
