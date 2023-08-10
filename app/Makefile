@@ -1,14 +1,14 @@
-default: installDist
-	./build/install/app/bin/app
+default:
+	@./build/install/app/bin/app
 
-run-dist: installDist
-	./build/install/app/bin/app
+run-dist:
+	@./build/install/app/bin/app
 
 installDist:
-	./gradlew installDist
+	@./gradlew installDist
 
 clean:
-	./gradlew clean
+	@./gradlew clean
 
 checkstyle:
-	./gradlew checkstyle
+	@./gradlew checkstyle
