@@ -1,4 +1,4 @@
-default:
+default: installDist
 	@./build/install/app/bin/app
 
 run-dist:
