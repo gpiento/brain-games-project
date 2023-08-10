@@ -21,8 +21,8 @@ public final class Even {
      * game Even.
      */
     public static void gameEven() {
-        System.out.println("Answer 'yes' if the number is even, "
-                + "otherwise answer 'no'.");
+        System.out.println("Answer 'yes' if the number is even, otherwise"
+                + " answer 'no'.");
 
         int count = 0;
         int numRnd;
@@ -36,8 +36,8 @@ public final class Even {
                     || (!isEven(numRnd) && answer.equals("no"))) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + answer
-                        + "' is wrong answer ;(. Correct answer was '"
+                System.out.println("'" + answer + "' is wrong answer ;(. "
+                        + "Correct answer was '"
                         + (isEven(numRnd) ? "yes" : "no") + "'.");
                 System.out.println("Let's try again, "
                         + Cli.getUserName() + "!");
