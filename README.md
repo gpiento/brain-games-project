@@ -23,3 +23,11 @@ Each game has three rounds. The user must give the correct answer to three quest
 
 ## Asciinema for game: Even
 [![asciicast](https://asciinema.org/a/3Pb1PxQa7GH8otOvoOXaO1GVJ.svg)](https://asciinema.org/a/3Pb1PxQa7GH8otOvoOXaO1GVJ)
+
+## Asciinema for game: Calc
+
+## Asciinema for game: GCD
+
+## Asciinema for game: Progression
+
+## Asciinema for game: Prime
