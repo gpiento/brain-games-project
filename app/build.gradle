@@ -24,6 +24,10 @@ test {
     useJUnitPlatform()
 }
 
+application {
+    mainClassName = 'hexlet.code.App'
+}
+
 run {
     standardInput = System.in
 }
