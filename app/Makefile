@@ -1,6 +1,6 @@
 default: run-dist
 
-run-dist: installDist
+run-dist:
 	@./build/install/app/bin/app
 
 installDist:
