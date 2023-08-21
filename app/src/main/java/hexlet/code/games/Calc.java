@@ -2,10 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 
-import static hexlet.code.Engine.COUNT_QUEST;
-import static hexlet.code.Engine.getAnswer;
-import static hexlet.code.Engine.isEven;
-import static hexlet.code.Engine.randomNumber;
+import static hexlet.code.Engine.*;
 
 public final class Calc {
 
@@ -18,7 +15,7 @@ public final class Calc {
     public static void gameCalc() {
         System.out.println("Answer 'yes' if the number is even, otherwise"
                            + " answer 'no'.");
-
+        int oper = randomOperation();
         int count = 0;
         int numRnd;
 

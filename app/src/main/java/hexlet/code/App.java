@@ -27,9 +27,6 @@ public final class App {
         System.out.println();
 
         switch (switcher) {
-            case 0 -> {
-                return;
-            }
             case 1 -> Cli.greetingUser();
             case 2 -> {
                 Cli.greetingUser();
