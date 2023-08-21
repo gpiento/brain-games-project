@@ -31,5 +31,6 @@ Each game has three rounds. The user must give the correct answer to three quest
 [![asciicast](https://asciinema.org/a/ap1aBXU8uv0IUggzcwPtzdfLt.svg)](https://asciinema.org/a/ap1aBXU8uv0IUggzcwPtzdfLt)
 
 ## Asciinema for game: Progression
+[![asciicast](https://asciinema.org/a/IoUWwyTsKFliufXfTqlu9mFbn.svg)](https://asciinema.org/a/IoUWwyTsKFliufXfTqlu9mFbn)
 
 ## Asciinema for game: Prime
