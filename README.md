@@ -28,6 +28,7 @@ Each game has three rounds. The user must give the correct answer to three quest
 [![asciicast](https://asciinema.org/a/lpwJv8hzilyYHyJgwMUfIn8P0.svg)](https://asciinema.org/a/lpwJv8hzilyYHyJgwMUfIn8P0)
 
 ## Asciinema for game: GCD
+[![asciicast](https://asciinema.org/a/ap1aBXU8uv0IUggzcwPtzdfLt.svg)](https://asciinema.org/a/ap1aBXU8uv0IUggzcwPtzdfLt)
 
 ## Asciinema for game: Progression
 
