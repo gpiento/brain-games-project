@@ -32,7 +32,7 @@ public final class Cli {
 
     /**
      * setUserName.
-     * @param name user
+     * @param name userName
      */
     public static void setUserName(final String name) {
         Cli.userName = name;

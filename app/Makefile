@@ -1,14 +1,24 @@
-default: installDist
+default:
 	@./build/install/app/bin/app
 
-run-dist: installDist
+run-dist:
 	@./build/install/app/bin/app
 
 installDist:
+	@./gradlew installDist --warning-mode none
+
+test:
+	@./gradlew clean
+	@./gradlew test
+
+build:
+	@./gradlew clean build
 	@./gradlew installDist --warning-mode none
 
 clean:
 	@./gradlew clean
 
 checkstyle:
-	@./gradlew checkstyle
+	@./gradlew checkstyleMain
+
+.PHONY: build
