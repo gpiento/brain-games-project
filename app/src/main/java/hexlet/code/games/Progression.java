@@ -30,7 +30,7 @@ public final class Progression {
 
         String[][] gameQuestions = new String[COUNT_QUEST][2];
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < COUNT_QUEST; i++) {
             int startChain = numGen(MIN_START_CHAIN, MAX_START_CHAIN);
             int stepChain = numGen(MIN_STEP_CHAIN, MAX_STEP_CHAIN);
             int countElements = numGen(MIN_COUNT_ELEMENTS, MAX_COUNT_ELEMENTS);
