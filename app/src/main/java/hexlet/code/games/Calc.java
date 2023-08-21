@@ -1,8 +1,9 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
+import hexlet.code.Engine;
 
-import static hexlet.code.Engine.*;
+import static hexlet.code.Engine.randomNumber;
+import static hexlet.code.Engine.randomOperation;
 
 public final class Calc {
 
@@ -13,30 +14,41 @@ public final class Calc {
      * game Even.
      */
     public static void gameCalc() {
-        System.out.println("Answer 'yes' if the number is even, otherwise"
-                           + " answer 'no'.");
-        int oper = randomOperation();
-        int count = 0;
-        int numRnd;
 
-        while (count < COUNT_QUEST) {
-            numRnd = randomNumber();
-            System.out.println("Question: " + numRnd);
-            System.out.print("Your answer: ");
-            String answer = getAnswer();
-            if ((isEven(numRnd) && answer.equals("yes"))
-                || (!isEven(numRnd) && answer.equals("no"))) {
-                System.out.println("Correct!");
-            } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. "
-                                   + "Correct answer was '"
-                                   + (isEven(numRnd) ? "yes" : "no") + "'.");
-                System.out.println("Let's try again, "
-                                   + Cli.getUserName() + "!");
-                return;
+        String[] gameMessages = {
+            "What is the result of the expression?",
+            "'%s' is wrong answer ;(. Correct answer was '%s'."
+        };
+
+        String[][] gameQuestions = new String[3][2];
+
+        for (int i = 0; i < 3; i++) {
+            int number1 = randomNumber();
+            int number2 = randomNumber();
+            StringBuilder quest = new StringBuilder();
+            quest.append(number1).append(" ");
+
+            switch (randomOperation()) {
+                case 1 -> {
+                    quest.append("+");
+                    gameQuestions[i][1] = String.valueOf(number1 + number2);
+                }
+                case 2 -> {
+                    quest.append("-");
+                    gameQuestions[i][1] = String.valueOf(number1 - number2);
+                }
+                case 3 -> {
+                    quest.append("*");
+                    gameQuestions[i][1] = String.valueOf(number1 * number2);
+                }
+                default -> {
+                }
             }
-            count++;
+
+            quest.append(" ").append(number2);
+            gameQuestions[i][0] = quest.toString();
         }
-        System.out.println("Congratulations, " + Cli.getUserName() + "!");
+
+        Engine.run(gameMessages, gameQuestions);
     }
 }
