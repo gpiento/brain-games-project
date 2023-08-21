@@ -12,10 +12,6 @@ public class Engine {
      * Range rnd numbers.
      */
     private static final int RANGE_NUMBER = 100;
-    /**
-     * Range rnd operation.
-     */
-    private static final int RANGE_OPERATION = 3;
 
     public static void run(String[] gameMessages, String[][] gameQuestions) {
         int countRound = 0;
@@ -52,17 +48,6 @@ public class Engine {
     }
 
     /**
-     * random operation.
-     *
-     * @return int
-     */
-    @SuppressWarnings("checkstyle:MagicNumber")
-    public static int randomOperation() {
-        Random rnd = new Random();
-        return rnd.nextInt(RANGE_OPERATION) + 1;
-    }
-
-    /**
      * getAnswer.
      *
      * @return input
@@ -72,15 +57,5 @@ public class Engine {
         Scanner scanner = new Scanner(System.in);
         input = scanner.nextLine();
         return input;
-    }
-
-    /**
-     * isEven.
-     *
-     * @param n number
-     * @return boolean
-     */
-    public static boolean isEven(final int n) {
-        return n % 2 == 0;
     }
 }

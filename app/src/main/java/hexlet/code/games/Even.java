@@ -2,7 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import static hexlet.code.Engine.isEven;
 import static hexlet.code.Engine.randomNumber;
 
 public final class Even {
@@ -29,5 +28,15 @@ public final class Even {
         }
 
         Engine.run(gameMessages, gameQuestions);
+    }
+
+    /**
+     * isEven.
+     *
+     * @param n number
+     * @return boolean
+     */
+    public static boolean isEven(final int n) {
+        return n % 2 == 0;
     }
 }

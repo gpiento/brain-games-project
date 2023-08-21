@@ -2,16 +2,21 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
+import java.util.Random;
+
 import static hexlet.code.Engine.randomNumber;
-import static hexlet.code.Engine.randomOperation;
 
 public final class Calc {
+    /**
+     * Range rnd operation.
+     */
+    private static final int RANGE_OPERATION = 3;
 
     private Calc() {
     }
 
     /**
-     * game Even.
+     * game Calc.
      */
     public static void gameCalc() {
 
@@ -50,5 +55,16 @@ public final class Calc {
         }
 
         Engine.run(gameMessages, gameQuestions);
+    }
+
+    /**
+     * random operation.
+     *
+     * @return int
+     */
+    @SuppressWarnings("checkstyle:MagicNumber")
+    public static int randomOperation() {
+        Random rnd = new Random();
+        return rnd.nextInt(RANGE_OPERATION) + 1;
     }
 }

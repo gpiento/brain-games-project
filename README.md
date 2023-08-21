@@ -34,3 +34,4 @@ Each game has three rounds. The user must give the correct answer to three quest
 [![asciicast](https://asciinema.org/a/IoUWwyTsKFliufXfTqlu9mFbn.svg)](https://asciinema.org/a/IoUWwyTsKFliufXfTqlu9mFbn)
 
 ## Asciinema for game: Prime
+[![asciicast](https://asciinema.org/a/PnBnzksw3XM01mHEfbPmgKxgE.svg)](https://asciinema.org/a/PnBnzksw3XM01mHEfbPmgKxgE)
