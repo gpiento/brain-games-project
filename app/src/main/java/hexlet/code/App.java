@@ -9,6 +9,30 @@ import hexlet.code.games.Progression;
 import java.util.Scanner;
 
 public final class App {
+    /**
+     * greeting user.
+     */
+    public static final int GREETING_USER = 1;
+    /**
+     * game Even.
+     */
+    public static final int GAME_EVEN = 2;
+    /**
+     * game Even.
+     */
+    public static final int GAME_CALC = 3;
+    /**
+     * game Even.
+     */
+    public static final int GAME_GCD = 4;
+    /**
+     * game Even.
+     */
+    public static final int GAME_PROGRESSION = 5;
+    /**
+     * game Even.
+     */
+    public static final int GAME_PRIME = 6;
 
     private App() {
     }
@@ -33,24 +57,24 @@ public final class App {
         System.out.println();
 
         switch (switcher) {
-            case 1 -> Cli.greetingUser();
-            case 2 -> {
+            case GREETING_USER -> Cli.greetingUser();
+            case GAME_EVEN -> {
                 Cli.greetingUser();
                 Even.gameEven();
             }
-            case 3 -> {
+            case GAME_CALC -> {
                 Cli.greetingUser();
                 Calc.gameCalc();
             }
-            case 4 -> {
+            case GAME_GCD -> {
                 Cli.greetingUser();
                 GCD.gameGCD();
             }
-            case 5 -> {
+            case GAME_PROGRESSION -> {
                 Cli.greetingUser();
                 Progression.gameProgression();
             }
-            case 6 -> {
+            case GAME_PRIME -> {
                 Cli.greetingUser();
                 Prime.gamePrime();
             }

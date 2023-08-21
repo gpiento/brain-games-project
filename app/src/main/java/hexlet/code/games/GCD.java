@@ -2,6 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
+import static hexlet.code.Engine.COUNT_QUEST;
 import static hexlet.code.Engine.randomNumber;
 
 public final class GCD {
@@ -19,9 +20,9 @@ public final class GCD {
             "'%s' is wrong answer ;(. Correct answer was '%s'."
         };
 
-        String[][] gameQuestions = new String[3][2];
+        String[][] gameQuestions = new String[COUNT_QUEST][2];
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < COUNT_QUEST; i++) {
             int number1 = randomNumber();
             int number2 = randomNumber();
 

@@ -4,7 +4,16 @@ import hexlet.code.Engine;
 
 import java.util.Random;
 
+import static hexlet.code.Engine.COUNT_QUEST;
+
 public final class Progression {
+
+    public static final int MIN_START_CHAIN = 5;
+    public static final int MAX_START_CHAIN = 20;
+    public static final int MIN_STEP_CHAIN = 2;
+    public static final int MAX_STEP_CHAIN = 8;
+    public static final int MIN_COUNT_ELEMENTS = 5;
+    public static final int MAX_COUNT_ELEMENTS = 12;
 
     private Progression() {
     }
@@ -19,12 +28,12 @@ public final class Progression {
             "'%s' is wrong answer ;(. Correct answer was '%s'."
         };
 
-        String[][] gameQuestions = new String[3][2];
+        String[][] gameQuestions = new String[COUNT_QUEST][2];
 
         for (int i = 0; i < 3; i++) {
-            int startChain = numGen(5, 20);
-            int stepChain = numGen(2, 8);
-            int countElements = numGen(5, 12);
+            int startChain = numGen(MIN_START_CHAIN, MAX_START_CHAIN);
+            int stepChain = numGen(MIN_STEP_CHAIN, MAX_STEP_CHAIN);
+            int countElements = numGen(MIN_COUNT_ELEMENTS, MAX_COUNT_ELEMENTS);
             int numberQuest = numGen(1, countElements - 1);
             StringBuilder quest = new StringBuilder();
 
