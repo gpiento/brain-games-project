@@ -5,7 +5,7 @@
 
 ## About the project
 This project is called "Brain Games".
-This console application is implemented on the Java SE version 17 platform.
+This console application is implemented on the Java SE version 20 platform.
 
 ## Description
 This application contains five mini games:
