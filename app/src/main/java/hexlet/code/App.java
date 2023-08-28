@@ -33,9 +33,7 @@ public final class App {
         System.out.println();
 
         switch (switcher) {
-            case GREETING_USER -> {
-                Cli.greetingUser();
-            }
+            case GREETING_USER -> Cli.greetingUser();
             case GAME_EVEN -> {
                 Cli.greetingUser();
                 Even.gameEven();
@@ -56,9 +54,7 @@ public final class App {
                 Cli.greetingUser();
                 Prime.gamePrime();
             }
-            default -> {
-                throw new InputMismatchException("Не правильный выбор.");
-            }
+            default -> throw new InputMismatchException("Не правильный выбор.");
         }
     }
 }

@@ -38,9 +38,7 @@ public final class Calc {
                     questString.append("*");
                     gameQuestions[i][1] = String.valueOf(number1 * number2);
                 }
-                default -> {
-                    throw new IllegalArgumentException("Неподдерживаемая операция.");
-                }
+                default -> throw new IllegalArgumentException("Неподдерживаемая операция.");
             }
 
             questString.append(" ").append(number2);
