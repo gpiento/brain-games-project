@@ -3,17 +3,9 @@ package hexlet.code;
 import java.util.Scanner;
 
 public final class Cli {
-    /**
-     * userName.
-     */
+
     private static String userName;
 
-    private Cli() {
-    }
-
-    /**
-     * greetUser.
-     */
     public static void greetingUser() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
@@ -22,18 +14,10 @@ public final class Cli {
         System.out.println("Hello, " + getUserName() + "!");
     }
 
-    /**
-     * getUserName.
-     * @return userName
-     */
     public static String getUserName() {
         return userName;
     }
 
-    /**
-     * setUserName.
-     * @param name userName
-     */
     public static void setUserName(final String name) {
         Cli.userName = name;
     }

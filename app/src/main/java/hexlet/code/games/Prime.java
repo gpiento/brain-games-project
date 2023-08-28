@@ -7,18 +7,9 @@ import static hexlet.code.Engine.randomNumber;
 
 public final class Prime {
 
-    private Prime() {
-    }
+    private static final String RULE_GAME = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-    /**
-     * game Prime.
-     */
     public static void gamePrime() {
-
-        String[] gameMessages = {
-            "Answer 'yes' if given number is prime. Otherwise answer 'no'.",
-            "'%s' is wrong answer ;(. Correct answer was '%s'."
-        };
 
         String[][] gameQuestions = new String[COUNT_QUEST][2];
 
@@ -28,10 +19,10 @@ public final class Prime {
             gameQuestions[i][1] = isPrime(number) ? "yes" : "no";
         }
 
-        Engine.run(gameMessages, gameQuestions);
+        Engine.run(RULE_GAME, gameQuestions);
     }
 
-    public static boolean isPrime(int number) {
+    public static boolean isPrime(final int number) {
         if (number <= 1) {
             return false;
         }

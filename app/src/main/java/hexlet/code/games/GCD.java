@@ -7,18 +7,9 @@ import static hexlet.code.Engine.randomNumber;
 
 public final class GCD {
 
-    private GCD() {
-    }
+    private static final String RULE_GAME = "Find the greatest common divisor of given numbers.";
 
-    /**
-     * game Even.
-     */
     public static void gameGCD() {
-
-        String[] gameMessages = {
-            "Find the greatest common divisor of given numbers.",
-            "'%s' is wrong answer ;(. Correct answer was '%s'."
-        };
 
         String[][] gameQuestions = new String[COUNT_QUEST][2];
 
@@ -30,7 +21,7 @@ public final class GCD {
             gameQuestions[i][1] = String.valueOf(gcd(number1, number2));
         }
 
-        Engine.run(gameMessages, gameQuestions);
+        Engine.run(RULE_GAME, gameQuestions);
     }
 
     public static int gcd(int a, int b) {

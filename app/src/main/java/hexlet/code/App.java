@@ -6,42 +6,18 @@ import hexlet.code.games.GCD;
 import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public final class App {
-    /**
-     * greeting user.
-     */
+
     public static final int GREETING_USER = 1;
-    /**
-     * game Even.
-     */
     public static final int GAME_EVEN = 2;
-    /**
-     * game Even.
-     */
     public static final int GAME_CALC = 3;
-    /**
-     * game Even.
-     */
     public static final int GAME_GCD = 4;
-    /**
-     * game Even.
-     */
     public static final int GAME_PROGRESSION = 5;
-    /**
-     * game Even.
-     */
     public static final int GAME_PRIME = 6;
 
-    private App() {
-    }
-
-    /**
-     * App.
-     *
-     * @param args input
-     */
     public static void main(final String[] args) {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
@@ -57,7 +33,9 @@ public final class App {
         System.out.println();
 
         switch (switcher) {
-            case GREETING_USER -> Cli.greetingUser();
+            case GREETING_USER -> {
+                Cli.greetingUser();
+            }
             case GAME_EVEN -> {
                 Cli.greetingUser();
                 Even.gameEven();
@@ -79,6 +57,7 @@ public final class App {
                 Prime.gamePrime();
             }
             default -> {
+                throw new InputMismatchException("Не правильный выбор.");
             }
         }
     }

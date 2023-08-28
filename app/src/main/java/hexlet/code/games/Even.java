@@ -7,18 +7,9 @@ import static hexlet.code.Engine.randomNumber;
 
 public final class Even {
 
-    private Even() {
-    }
+    private static final String RULE_GAME = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-    /**
-     * game Even.
-     */
     public static void gameEven() {
-
-        String[] gameMessages = {
-            "Answer 'yes' if the number is even, otherwise answer 'no'.",
-            "'%s' is wrong answer ;(. Correct answer was '%s'."
-        };
 
         String[][] gameQuestions = new String[COUNT_QUEST][2];
 
@@ -28,15 +19,9 @@ public final class Even {
             gameQuestions[i][1] = isEven(number) ? "yes" : "no";
         }
 
-        Engine.run(gameMessages, gameQuestions);
+        Engine.run(RULE_GAME, gameQuestions);
     }
 
-    /**
-     * isEven.
-     *
-     * @param n number
-     * @return boolean
-     */
     public static boolean isEven(final int n) {
         return n % 2 == 0;
     }
