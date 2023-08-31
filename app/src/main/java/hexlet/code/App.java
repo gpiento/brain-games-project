@@ -34,26 +34,11 @@ public final class App {
 
         switch (switcher) {
             case GREETING_USER -> Cli.greetingUser();
-            case GAME_EVEN -> {
-                Cli.greetingUser();
-                Even.gameEven();
-            }
-            case GAME_CALC -> {
-                Cli.greetingUser();
-                Calc.gameCalc();
-            }
-            case GAME_GCD -> {
-                Cli.greetingUser();
-                GCD.gameGCD();
-            }
-            case GAME_PROGRESSION -> {
-                Cli.greetingUser();
-                Progression.gameProgression();
-            }
-            case GAME_PRIME -> {
-                Cli.greetingUser();
-                Prime.gamePrime();
-            }
+            case GAME_EVEN -> Even.gameEven();
+            case GAME_CALC -> Calc.gameCalc();
+            case GAME_GCD -> GCD.gameGCD();
+            case GAME_PROGRESSION -> Progression.gameProgression();
+            case GAME_PRIME -> Prime.gamePrime();
             default -> throw new InputMismatchException("Не правильный выбор.");
         }
     }

@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 import static hexlet.code.Engine.COUNT_QUEST;
-import static hexlet.code.Engine.randomNumber;
+import static hexlet.code.Utils.numberGenerator;
 
 public final class GCD {
 
@@ -14,8 +14,8 @@ public final class GCD {
         String[][] gameQuestions = new String[COUNT_QUEST][2];
 
         for (int i = 0; i < COUNT_QUEST; i++) {
-            int number1 = randomNumber();
-            int number2 = randomNumber();
+            int number1 = numberGenerator();
+            int number2 = numberGenerator();
 
             gameQuestions[i][0] = number1 + " " + number2;
             gameQuestions[i][1] = String.valueOf(gcd(number1, number2));

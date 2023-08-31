@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 import static hexlet.code.Engine.COUNT_QUEST;
-import static hexlet.code.Engine.randomNumber;
+import static hexlet.code.Utils.numberGenerator;
 
 public final class Prime {
 
@@ -14,7 +14,7 @@ public final class Prime {
         String[][] gameQuestions = new String[COUNT_QUEST][2];
 
         for (int i = 0; i < COUNT_QUEST; i++) {
-            int number = randomNumber();
+            int number = numberGenerator();
             gameQuestions[i][0] = String.valueOf(number);
             gameQuestions[i][1] = isPrime(number) ? "yes" : "no";
         }

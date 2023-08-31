@@ -2,10 +2,8 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
-
 import static hexlet.code.Engine.COUNT_QUEST;
-import static hexlet.code.Engine.randomNumber;
+import static hexlet.code.Utils.numberGenerator;
 
 public final class Calc {
 
@@ -20,36 +18,36 @@ public final class Calc {
         String[][] gameQuestions = new String[COUNT_QUEST][2];
 
         for (int i = 0; i < COUNT_QUEST; i++) {
-            int number1 = randomNumber();
-            int number2 = randomNumber();
-            StringBuilder questString = new StringBuilder();
-            questString.append(number1).append(" ");
-
-            switch (randomOperation()) {
-                case ADDITION -> {
-                    questString.append("+");
-                    gameQuestions[i][1] = String.valueOf(number1 + number2);
-                }
-                case SUBTRACTION -> {
-                    questString.append("-");
-                    gameQuestions[i][1] = String.valueOf(number1 - number2);
-                }
-                case MULTIPLICATION -> {
-                    questString.append("*");
-                    gameQuestions[i][1] = String.valueOf(number1 * number2);
-                }
-                default -> throw new IllegalArgumentException("Неподдерживаемая операция.");
-            }
-
-            questString.append(" ").append(number2);
-            gameQuestions[i][0] = questString.toString();
+            makeQuest(gameQuestions, i);
         }
 
         Engine.run(RULE_GAME, gameQuestions);
     }
 
-    public static int randomOperation() {
-        Random rnd = new Random();
-        return rnd.nextInt(RANGE_OPERATION) + 1;
+    public static void makeQuest(String[][] gameQuestions, int i) {
+        int number1 = numberGenerator();
+        int number2 = numberGenerator();
+        StringBuilder questString = new StringBuilder();
+        questString.append(number1).append(" ");
+
+        switch (numberGenerator(RANGE_OPERATION)) {
+            case ADDITION -> {
+                questString.append("+");
+                gameQuestions[i][1] = String.valueOf(number1 + number2);
+            }
+            case SUBTRACTION -> {
+                questString.append("-");
+                gameQuestions[i][1] = String.valueOf(number1 - number2);
+            }
+            case MULTIPLICATION -> {
+                questString.append("*");
+                gameQuestions[i][1] = String.valueOf(number1 * number2);
+            }
+            default ->
+                    throw new IllegalArgumentException("Неподдерживаемая операция.");
+        }
+
+        questString.append(" ").append(number2);
+        gameQuestions[i][0] = questString.toString();
     }
 }
