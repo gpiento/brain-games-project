@@ -36,7 +36,7 @@ public final class Calc {
         questString.append(selectOperation(operator));
         questString.append(number2);
         gameQuestions[i][0] = questString.toString();
-        gameQuestions[i][1] = String.valueOf(number1 + number2);
+        gameQuestions[i][1] = String.valueOf(calcAnswer(number1, number2, operator));
     }
 
     public static String selectOperation(int operator) {
@@ -54,4 +54,21 @@ public final class Calc {
                     throw new IllegalArgumentException("Неподдерживаемая операция.");
         }
     }
+
+    public static int calcAnswer(int number1, int number2, int operator) {
+        switch (operator) {
+            case ADDITION -> {
+                return number1 + number2;
+            }
+            case SUBTRACTION -> {
+                return number1 - number2;
+            }
+            case MULTIPLICATION -> {
+                return number1 * number2;
+            }
+            default ->
+                    throw new IllegalArgumentException("Неподдерживаемая операция.");
+        }
+    }
+
 }

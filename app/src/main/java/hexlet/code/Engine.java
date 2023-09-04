@@ -17,7 +17,7 @@ public class Engine {
         System.out.println(gameMessages);
 
         for (int i = 0; i < COUNT_QUEST; i++) {
-            //System.out.println("QQQ:" + gameQuestions[i][0] + " AAA:" + gameQuestions[i][1]);
+//            System.out.println("QQQ:" + gameQuestions[i][0] + " AAA:" + gameQuestions[i][1]);
             System.out.println("Question: " + gameQuestions[i][0]);
             System.out.print("Your answer: ");
             String answer = scanner.nextLine();
