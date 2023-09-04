@@ -3,10 +3,11 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 import static hexlet.code.Engine.COUNT_QUEST;
-import static hexlet.code.Utils.numberGenerator;
+import static hexlet.code.Utils.generateNumber;
 
 public final class GCD {
 
+    private static final int RANGE_NUMBER = 100;
     private static final String RULE_GAME = "Find the greatest common divisor of given numbers.";
 
     public static void gameGCD() {
@@ -14,8 +15,8 @@ public final class GCD {
         String[][] gameQuestions = new String[COUNT_QUEST][2];
 
         for (int i = 0; i < COUNT_QUEST; i++) {
-            int number1 = numberGenerator();
-            int number2 = numberGenerator();
+            int number1 = generateNumber(0, RANGE_NUMBER);
+            int number2 = generateNumber(0, RANGE_NUMBER);
 
             gameQuestions[i][0] = number1 + " " + number2;
             gameQuestions[i][1] = String.valueOf(gcd(number1, number2));
