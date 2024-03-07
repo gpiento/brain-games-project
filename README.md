@@ -1,8 +1,7 @@
 ## Игры разума
 [![Actions Status](https://github.com/gpiento/java-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/gpiento/java-project-lvl1/actions)
-[![GitHub Workflow Status](https://github.com//gpiento/java-project-lvl1/actions/workflows/github-check.yml/badge.svg)](https://github.com/gpiento/java-project-lvl1/actions)
-![Java CI](https://github.com/hexlet-boilerplates/java-package/workflows/Java%20CI/badge.svg)
-[![Maintainability](https://api.codeclimate.com/v1/badges/5f917a5cde2b3ae8316b/maintainability)](https://codeclimate.com/github/gpiento/java-project-lvl1/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c4c9ce1d9c8bc3017523/maintainability)](https://codeclimate.com/github/gpiento/java-project-lvl1/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/c4c9ce1d9c8bc3017523/test_coverage)](https://codeclimate.com/github/gpiento/java-project-lvl1/test_coverage)
 ---
 «Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
 
