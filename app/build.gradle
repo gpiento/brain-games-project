@@ -1,6 +1,5 @@
 plugins {
-    id 'se.patrikerdes.use-latest-versions' version '0.2.18'
-    id 'com.github.ben-manes.versions' version '0.47.0'
+    id 'com.github.ben-manes.versions' version '0.51.0'
     id 'application'
     id 'checkstyle'
 }
@@ -13,8 +12,8 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testImplementation platform('org.junit:junit-bom:5.11.0-M1')
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.0-M1'
 }
 
 mainClassName = 'hexlet.code.App'
@@ -32,6 +31,6 @@ run {
 }
 
 compileJava {
-    options.release.set(20)
+    options.release.set(21)
 }
 
