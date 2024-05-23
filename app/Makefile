@@ -1,23 +1,22 @@
-default: run-dist
+.DEFAULT_GOAL := default
+.PHONY: build
 
-run-dist:
+default: build run-dist
+
+run-dist: build
 	@./build/install/app/bin/app
 
-installDist:
+install:
 	@./gradlew installDist --warning-mode none
 
 test:
-	@./gradlew clean
-	@./gradlew test
+	@./gradlew test --warning-mode none
 
 build:
-	@./gradlew clean build
-	@./gradlew installDist --warning-mode none
+	@./gradlew clean build installDist --warning-mode none
 
 clean:
-	@./gradlew clean
+	@./gradlew clean --warning-mode none
 
-checkstyle:
-	@./gradlew checkstyleMain
-
-.PHONY: build
+lint:
+	@./gradlew checkstyleMain --warning-mode none
