@@ -2,7 +2,7 @@
 
 [![Actions Status](https://github.com/gpiento/java-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/gpiento/java-project-lvl1/actions)
 ![Java CI](https://github.com/hexlet-boilerplates/java-package/workflows/Java%20CI/badge.svg)
-[![Maintainability](https://api.codeclimate.com/v1/badges/c4c9ce1d9c8bc3017523/maintainability)](https://codeclimate.com/github/gpiento/java-project-lvl1/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/3af264ab2d3712994e29/maintainability)](https://codeclimate.com/github/gpiento/brain-games-project/maintainability)
 
 “Mind Games” is a set of five console games modeled after popular mobile brain-pumping apps. Each game asks questions to which you have to give correct answers. After three correct answers, the game is considered to be completed. Incorrect answers end the game and prompt you to go through it again. Games:
 
